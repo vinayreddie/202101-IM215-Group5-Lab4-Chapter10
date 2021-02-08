@@ -20,3 +20,4 @@ $(function() {
         $("figure").slideToggle(2000);
     });
 });
+
