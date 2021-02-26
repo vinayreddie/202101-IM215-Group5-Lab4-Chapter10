@@ -1,15 +1,14 @@
 $(document).ready(function() {
-
     images.forEach(element => {
-        var img = $("<img></img>").attr('src', 'images/square/' + element.path).attr('alt', element.title);
-        $(".gallery").append(img);
+        var image = $("<img></img>").attr('src', 'images/square/' + element.path).attr('alt', element.title);
+        $(".gallery").append(image);
     });
 
-    $("img").mouseenter(function(event) {
+    $("img").mouseenter(function(_event) {
         $(this).addClass("gray");
         var div = $("<div></div>").attr('id', 'preview');
-        var img = $("<img></img>").attr('src', $(this).attr('src').replace('square', 'medium')).attr('alt', $(this).attr('alt'));
-        div.append(img);
+        var image = $("<img></img>").attr('src', $(this).attr('src').replace('square', 'medium')).attr('alt', $(this).attr('alt'));
+        div.append(image);
         images.forEach(ele => {
             if (ele.title == $(this).attr('alt')) {
                 var p = $("<p></p>").html(ele.title + "</br>" + ele.city + ", " + ele.country + " [" + ele.taken + "]");
