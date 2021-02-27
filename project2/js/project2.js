@@ -16,10 +16,10 @@ $(document).ready(function() {
         });
         $("body").append(di);
     });
-    $("img").mouseleave(function(event) {
+    $("img").mousemove(function(event) {
         $("#preview").css('left', event.pageX).css('top', event.pageY);
     });
-    $("img").mousemove(function() {
+    $("img").mouseleave(function() {
         $("#preview").remove();
         $(this).removeClass("gray");
     });
