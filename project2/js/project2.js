@@ -3,6 +3,7 @@ $(document).ready(function() {
         var image = $("<img></img>").attr('src', 'images/square/' + element.path).attr('alt', element.title);
         $(".gallery").append(image);
         
+        
     });
     $("img").mouseenter(function() {
         $(this).addClass("gray");
