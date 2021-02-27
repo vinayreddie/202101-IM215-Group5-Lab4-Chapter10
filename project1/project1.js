@@ -15,6 +15,7 @@ $(document).ready(function() {
     $('#sliderOpacity').on('input', function(event) {
         $('#sliderOpacity').attr('value', event.target.value);
         $('#numOpacity').html(event.target.value);
+        
         applyFilters();
     });
 
