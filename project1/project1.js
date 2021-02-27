@@ -4,6 +4,7 @@ $(document).ready(function() {
         if (event.target && event.target.matches('img')) {
             var thumbImg = event.target.cloneNode();
             thumbImg.src = thumbImg.src.replace('small', 'medium');
+            
             $('#imgManipulated>img').replaceWith(thumbImg);
             $('figcaption').replaceWith($('<figcaption> <em>' + thumbImg.alt + '</em></br>' + thumbImg.title + '</figcaption>'));
             applyFilters();
