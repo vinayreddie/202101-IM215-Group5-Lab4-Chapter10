@@ -3,7 +3,7 @@ $(document).ready(function() {
         var image = $("<img></img>").attr('src', 'images/square/' + element.path).attr('alt', element.title);
         $(".gallery").append(image);
     });
-    $("img").mouseenter(function(event) {
+    $("img").mouseenter(function() {
         $(this).addClass("gray");
         var di = $("<div></div>").attr('id', 'preview');
         var image = $("<img></img>").attr('src', $(this).attr('src').replace('square', 'medium')).attr('alt', $(this).attr('alt'));
@@ -16,10 +16,10 @@ $(document).ready(function() {
         });
         $("body").append(di);
     });
-    $("img").mousemove(function(event) {
+    $("img").mouseleave(function(event) {
         $("#preview").css('left', event.pageX).css('top', event.pageY);
     });
-    $("img").mouseleave(function() {
+    $("img").mousemove(function() {
         $("#preview").remove();
         $(this).removeClass("gray");
     });
